@@ -1,0 +1,32 @@
+// Info
+@import 'info';
+
+// Config
+// @import 'config/functions';
+// @import 'config/vars';
+// @import 'config/mixins';
+
+// Base
+// @import 'base/base';
+
+// layouts
+// @import 'layout/layout';
+
+// Components
+// @import 'components/logos';
+// @import 'components/menus';
+// @import 'components/banners';
+// @import 'components/galleries';
+// @import 'components/footers';
+// @import 'components/sections';
+// @import 'components/about';
+// @import 'components/contact';
+
+// Theme
+// @import 'theme/typography';
+// @import 'theme/theme';
+
+.title {
+    background-color: rgb(27, 15, 141);
+    color: rgb(224, 123, 123);
+}

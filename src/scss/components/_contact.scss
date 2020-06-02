@@ -1,0 +1,29 @@
+
+input {
+    line-height: 3em;
+    padding-left: 1em;
+}
+
+textarea {
+    padding: 1em;
+}
+
+.form__item {
+    font-family: 'Zilla Slab', serif;
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.form__submit {
+    @include button(primary);
+    font-size: 1em;
+}
+
+.form--contact {
+    @include from(large) {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

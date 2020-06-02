@@ -1,0 +1,21 @@
+.l-container,
+[class*="l-container--"] {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.l-container {width: 98%;}
+
+.l-container--full {max-width: 100%;}
+
+.l-container--row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.l-section {
+    margin-top: 4em;
+    margin-bottom: 4em;
+}

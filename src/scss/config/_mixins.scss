@@ -1,0 +1,47 @@
+// Colors
+@mixin var($property, $var) {
+    #{$property}: map-get($map: $vars, $key: $var);
+    #{$property}: --#{$var};
+}
+
+
+// Mixin typography
+@mixin font($size) {
+    font-size: nth($list: map-get($map: $fonts, $key: $size), $n: 1);
+    line-height: nth($list: map-get($map: $fonts, $key: $size), $n: 2);
+}
+
+
+// Breackpoints
+@mixin from($breackpoint) {
+    @media screen and (min-width: map-get($map: $breackpoints, $key: $breackpoint)) {
+        @content;
+    }
+}
+
+
+// Buttons
+@mixin button($type) {
+    @if $type == primary {
+        background-color: $accent;
+        color: #ffffff;
+        &:hover {
+            background-color: #ffffff;
+            color: $accent;
+        }
+    }
+    @else if $type == secondary {
+        background-color: $secondary;
+        color: $primary;
+        &:hover {
+            background-color: $accent;
+            color: #ffffff;
+        }
+    }
+
+    line-height: 3em;
+    border: 1px solid $primary;
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 5px;
+}

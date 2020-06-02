@@ -1,0 +1,1 @@
+export const cj = (a, b) => a + b

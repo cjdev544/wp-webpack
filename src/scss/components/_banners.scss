@@ -1,0 +1,53 @@
+  .banner {
+      background-image: url(../img/banner.jpg);
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      padding-top: 5em;
+      padding-bottom: 5em;
+      position: relative;
+      background-attachment: fixed;
+
+      @include from(large) {
+        padding-top: 9em;
+        padding-bottom: 9em;
+      }
+
+      &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: linear-gradient(130deg, $accent, $primary);
+          opacity: .6;
+      }
+
+    &__copy {
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+
+        @include from(large) {
+            text-align: left;
+        }
+    }
+
+    &__title {
+        @include font(title1);
+    }
+
+    &__subtitle {
+        @include font(title3);
+        display: inline-block;
+        background-color: rgba($color: $primary, $alpha: .8);
+        padding: .5em 1em;
+        margin: 0;
+
+        @include from(large) {
+            margin-left: 3em;
+            @include font(title2);
+        }
+    }
+  }
